@@ -1,0 +1,65 @@
+{
+  "name": "basicos",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cra-template": "1.0.3",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-scripts": "3.4.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint --fix --max-warnings=0 .",
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|md|html)\"",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "*.+(js|jsx)": [
+      "yarn run eslint:fix",
+      "prettier --write \"**/*.+(js|jsx)\""
+    ],
+    "*.+(json|yml|yaml|md)": [
+      "prettier --write \"**/*.+(json|yml|yaml|md)\""
+    ],
+    "*.+(css|scss)": [
+      "yarn run scss-lint:fix",
+      "yarn run scss-lint"
+    ]
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "@types/react": "^16.9.56",
+    "@types/react-redux": "^7.1.1",
+    "@typescript-eslint/eslint-plugin": "^4.9.1",
+    "@typescript-eslint/parser": "^4.9.1",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7"
+
+  }
+}
